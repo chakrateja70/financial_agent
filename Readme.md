@@ -1,122 +1,42 @@
-1. Create a Virtual Environment
-Create a virtual environment using Python 3.12:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Setup Instructions</title>
+</head>
+<body>
+    <h1>Project Setup Instructions</h1>
 
-bash
-Copy
-Edit
-python3.12 -m venv venv
-2. Activate the Virtual Environment
-Activate the virtual environment:
+    <h2>1. Create a Virtual Environment</h2>
+    <p>Create a virtual environment using Python 3.12:</p>
+    <pre><code>python3.12 -m venv venv</code></pre>
 
-On Windows:
-bash
-Copy
-Edit
-venv\Scripts\activate
-On macOS/Linux:
-bash
-Copy
-Edit
-source venv/bin/activate
-3. Install Required Packages
-Install all required dependencies:
+    <h2>2. Activate the Virtual Environment</h2>
+    <p>Activate the virtual environment:</p>
+    <p><strong>On Windows:</strong></p>
+    <pre><code>venv\Scripts\activate</code></pre>
 
-bash
-Copy
-Edit
-pip install -r requirements.txt
-4. Set Up the .env File
-Make sure your .env file contains the following API keys:
+    <p><strong>On macOS/Linux:</strong></p>
+    <pre><code>source venv/bin/activate</code></pre>
 
-PHIDATA_API_KEY (for Phidata services)
-GROQ_API_KEY (for Groq services)
-Example .env file:
+    <h2>3. Install Required Packages</h2>
+    <p>Install all required dependencies:</p>
+    <pre><code>pip install -r requirements.txt</code></pre>
 
-makefile
-Copy
-Edit
-PHIDATA_API_KEY=your_phidata_api_key_here
-GROQ_API_KEY=your_groq_api_key_here
-5. Run the Agent
-Once the virtual environment is set up and dependencies are installed, run the financial_agent.py file to start the agent:
+    <h2>4. Set Up the .env File</h2>
+    <p>Make sure your <code>.env</code> file contains the following API keys:</p>
+    <ul>
+        <li><strong>PHIDATA_API_KEY</strong> (for Phidata services)</li>
+        <li><strong>GROQ_API_KEY</strong> (for Groq services)</li>
+    </ul>
+    <p>Example <code>.env</code> file:</p>
+    <pre><code>PHIDATA_API_KEY=your_phidata_api_key_here
+GROQ_API_KEY=your_groq_api_key_here</code></pre>
 
-bash
-Copy
-Edit
-python financial_agent.py
-You can include these in your README file to guide users through setting up and running the project.
+    <h2>5. Run the Agent</h2>
+    <p>Once the virtual environment is set up and dependencies are installed, run the <code>financial_agent.py</code> file to start the agent:</p>
+    <pre><code>python financial_agent.py</code></pre>
 
-
-
-
-
-
-
-
-You said:
-give all in single file so that i can copy pate
-ChatGPT said:
-ChatGPT
-Here's the entire content you can copy-paste into your README file:
-
-shell
-Copy
-Edit
-# Project Setup Instructions
-
-## Environment Setup
-
-### 1. Create a Virtual Environment
-Create a virtual environment using Python 3.12:
-```bash
-python3.12 -m venv venv
-2. Activate the Virtual Environment
-Activate the virtual environment:
-
-On Windows:
-bash
-Copy
-Edit
-venv\Scripts\activate
-On macOS/Linux:
-bash
-Copy
-Edit
-source venv/bin/activate
-3. Install Required Packages
-Install all required dependencies:
-
-bash
-Copy
-Edit
-pip install -r requirements.txt
-4. Set Up the .env File
-Make sure your .env file contains the following API keys:
-
-PHIDATA_API_KEY (for Phidata services)
-GROQ_API_KEY (for Groq services)
-Example .env file:
-
-makefile
-Copy
-Edit
-PHIDATA_API_KEY=your_phidata_api_key_here
-GROQ_API_KEY=your_groq_api_key_here
-5. Run the Agent
-Once the virtual environment is set up and dependencies are installed, run the financial_agent.py file to start the agent:
-
-bash
-Copy
-Edit
-python financial_agent.py
-csharp
-Copy
-Edit
-
-This can now be directly pasted into your README file for easy access and instructions!
-
-
-
-
-
-
+</body>
+</html>
