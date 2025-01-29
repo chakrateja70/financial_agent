@@ -1,10 +1,6 @@
 from dotenv import load_dotenv
 import os
 
-# Load model directly
-from transformers import AutoModel
-model = AutoModel.from_pretrained("deepseek-ai/Janus-Pro-7B")
-
 from phi.agent import Agent
 from phi.model.groq import Groq
 from phi.tools.yfinance import YFinanceTools
@@ -23,7 +19,7 @@ os.environ["GROQ_API_KEY"] = api_key
 web_search_agent = Agent(
     name="Web Search Agent",
     role="Search the web for information",
-    model=Groq(id="llama3-groq-70b-8192-tool-use-preview"),
+    model=Groq(id="mixtral-8x7b-32768"),
     tools=[DuckDuckGo()],
     instructions=["Always include sources"],
     show_tools_calls=True,
@@ -34,7 +30,7 @@ web_search_agent = Agent(
 
 finance_agent = Agent(
     name="Financial Agent",
-    model=Groq(id="llama3-groq-70b-8192-tool-use-preview"),
+    model=Groq(id="mixtral-8x7b-32768"),
     tools=[
         YFinanceTools(
             stock_price=True,
@@ -60,6 +56,6 @@ multi_ai_agent = Agent(
 
 try:
     multi_ai_agent.print_response("What does Nvidia do?", stream=True)
+    #multi_ai_agent.print_response("What is the current stock price of NVDA?", stream=True)
 except Exception as e:
     print("An error occurred:", e)
-
