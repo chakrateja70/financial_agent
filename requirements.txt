@@ -1,0 +1,9 @@
+phidata # for fetching data from phidata
+python-dotenv # for loading environment variables
+yfinance # for fetching stock data
+packaging # for packaging the code
+duckduckgo-search  # for searching acts like seach engine
+fastapi # for creating API
+uvicorn # for running the API
+groq   # for querying the data
+openai # for fetching the data from openai
