@@ -12,7 +12,6 @@ api_key = os.getenv("GROQ_API_KEY")
 if not api_key:
     raise ValueError("GROQ_API_KEY is not set. Check your .env file.")
 
-# Set the environment variable explicitly
 os.environ["GROQ_API_KEY"] = api_key
 
 # web search agent
@@ -52,10 +51,10 @@ multi_ai_agent = Agent(
     show_tools_calls=True,
 )
 
-#multi_ai_agent.print_response("Summarize analyst recommendations and share the latest news for Nvidia", stream=True)
 
-try:
-    multi_ai_agent.print_response("What does Nvidia do?", stream=True)
-    #multi_ai_agent.print_response("What is the current stock price of NVDA?", stream=True)
-except Exception as e:
-    print("An error occurred:", e)
+finance_agent.print_response("What is the stock price of Tesla?", stream=True) #using financial agent to get financial data
+ 
+web_search_agent.print_response("What does Nvidia do?", stream=True) #using web search agent to get web search data
+
+multi_ai_agent.print_response("What is OpenAI?", stream=True) #using multi ai agent to get financial data and web search data
+
